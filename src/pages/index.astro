@@ -1,0 +1,77 @@
+--- 
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+---
+
+<Layout 
+  title="Portafolio de Jhonatan"
+  description="Contrata a Jhonatan Andres Sierra Sosa para tu próximo proyecto">
+  <main class="px-4">
+    <SectionContainer class="py-40 pb-20">
+      <img 
+        class="rounded-full size-12 mb-4" 
+        src="https://media.licdn.com/dms/image/v2/D4E03AQENHGVqhy492Q/profile-displayphoto-shrink_200_200/B4EZSO5D7jGwAY-/0/1737564110913?e=1743033600&v=beta&t=zFwB_IZq8Zq9IH8lo2QS4-X-1gud7rBA4kaXMBpcraE" 
+        alt="jhonas photo" 
+      />
+
+      <h1 class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 text-pretty">
+        Hola, soy Jhonatan Andres Sierra Sosa  
+        <a 
+          href="https://www.linkedin.com/in/jhonatan-andres-sierra-sosa-3b8314239/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex justify-center items-center"
+        ><Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+
+      <h2 class="text-xl lg:text-xl opacity-90 text-pretty max-w-[700px]">
+        Estoy próximo a graduarme de la carrera de 
+        <span class="text-yellow-200/90">
+          Ingeniería de Sistemas y Computación
+        </span>, donde he demostrado ser un estudiante aplicado y 
+        comprometido con mi formación. 
+        <span class="opacity-90">
+          Aunque aún no tengo experiencia laboral, mi dedicación y pasión por la tecnología me 
+          han permitido adquirir conocimientos teóricos y prácticos en diversas áreas.
+        </span>
+        <section></section>
+        Soy Colombiano 🦜.
+        <section></section>
+        Estoy entusiasmado por la oportunidad de aplicar mis habilidades y seguir aprendiendo en un entorno profesional.</h2>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/jhonatan-andres-sierra-sosa-3b8314239/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/ProfileJass">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:ProfileJass@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          profilejass@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="py-20">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+
+  </main>
+</Layout>

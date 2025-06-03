@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Mayo 2024",
+        title: "Xbox Web Scraper",
+        description:
+            "Una implementación para extraer el nombre y el precio de los artículos de las páginas de Xbox de Argentina y Colombia con fines educativos.",
+        link: "https://github.com/ProfileJass/XboxWebScraping",
+    },
+    {
+        date: "Abril 2024",
+        title: "AgroServicios",
+        description:
+            "Parte del proyecto de la asignatura de Ingeniería de Software I, donde se desarrolló una aplicación móvil para la gestión de servicios agrícolas.",
+        link: "https://github.com/ProfileJass/AgroServicios",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem { ...experience } />
+            </li>
+        ))
+    }
+</ol>
